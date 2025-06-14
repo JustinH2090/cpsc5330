@@ -36,15 +36,15 @@ class ViewController: UIViewController {
         if (mood >= 0 && mood <= 20){
             message = " Very Sad 😢"
         }else if (mood >= 21 && mood <= 40){
-            message = "Sad 🙁"
+            message = " Sad 🙁"
         }else if (mood >= 41 && mood <= 60){
-            message = "Neutral 😐"
+            message = " Neutral 😐"
         }else if (mood >= 61 && mood <= 80){
             message = " Happy 🙂"
         }else if (mood >= 81 && mood <= 100){
-            message = "Very Happy 😄"
+            message = " Very Happy 😄"
         }else{
-            message = "no mood selected"
+            message = " no mood selected"
         }
         
         MoodLabel.text = message
@@ -74,14 +74,28 @@ class ViewController: UIViewController {
         let dateString = a.string(from: Date())
 
         let nowMood = Int(MoodScale.value.rounded())
+        let nowMoodString: String
+        if (nowMood >= 0 && nowMood <= 20){
+            nowMoodString = " 😢"
+        }else if (nowMood >= 21 && nowMood <= 40){
+            nowMoodString = " 🙁"
+        }else if (nowMood >= 41 && nowMood <= 60){
+            nowMoodString = " 😐"
+        }else if (nowMood >= 61 && nowMood <= 80){
+            nowMoodString = " 🙂"
+        }else if (nowMood >= 81 && nowMood <= 100){
+            nowMoodString = " 😄"
+        }else{
+            nowMoodString = "no mood selected"
+        }
 
         var message = ""
-        message += "On \(dateString) you felt \(nowMood)."
+        message += "On \(dateString) you felt \(nowMoodString)."
 
         MoodMessage.text = message
         MoodMessage.isEnabled = true
     }
-
+ 
     
 }
 
