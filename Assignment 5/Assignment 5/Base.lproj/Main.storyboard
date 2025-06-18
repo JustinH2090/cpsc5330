@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment_5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="t4b-D4-yxt" userLabel="sv1">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26I-b3-Gzu" userLabel="MaiMessageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="333"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quest Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he7-2W-syX" userLabel="Quest Text">
+                                                <rect key="frame" x="139" y="151.66666666666669" width="115" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="he7-2W-syX" firstAttribute="centerX" secondItem="26I-b3-Gzu" secondAttribute="centerX" id="t5V-4M-P1n"/>
+                                            <constraint firstItem="he7-2W-syX" firstAttribute="centerY" secondItem="26I-b3-Gzu" secondAttribute="centerY" id="zxh-a3-DAr"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-DU-3sn" userLabel="DirectionView">
+                                        <rect key="frame" x="0.0" y="333" width="393" height="333"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4g-NM-YFS" userLabel="LeftBiew">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="333"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNC-hA-JbJ" userLabel="Left Button">
+                                                        <rect key="frame" x="38.666666666666671" y="149.33333333333337" width="53.666666666666671" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Left"/>
+                                                        <connections>
+                                                            <action selector="leftButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B48-3b-eJX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="XNC-hA-JbJ" firstAttribute="centerY" secondItem="d4g-NM-YFS" secondAttribute="centerY" id="EA7-eY-Qyd"/>
+                                                    <constraint firstItem="XNC-hA-JbJ" firstAttribute="centerX" secondItem="d4g-NM-YFS" secondAttribute="centerX" id="gLC-D4-XgK"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bcR-Hm-1sy" userLabel="FowardBackView">
+                                                <rect key="frame" x="131" y="0.0" width="131" height="333"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS8-Mn-pFY" userLabel="Forward Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="131" height="166.66666666666666"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Foward"/>
+                                                        <connections>
+                                                            <action selector="forwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vhg-ze-ffh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYB-iB-2xR" userLabel="Back Button">
+                                                        <rect key="frame" x="0.0" y="166.66666666666663" width="131" height="166.33333333333337"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                                        <connections>
+                                                            <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wj0-ka-8gA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="rYB-iB-2xR" firstAttribute="width" secondItem="rS8-Mn-pFY" secondAttribute="width" id="8lq-8A-b8h"/>
+                                                    <constraint firstItem="rYB-iB-2xR" firstAttribute="height" secondItem="rS8-Mn-pFY" secondAttribute="height" id="bBv-tM-r2N"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlF-V6-wWd" userLabel="RightView">
+                                                <rect key="frame" x="262" y="0.0" width="131" height="333"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTD-Yo-HTb" userLabel="Right Button">
+                                                        <rect key="frame" x="33.666666666666686" y="149.33333333333337" width="64" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Right"/>
+                                                        <connections>
+                                                            <action selector="rightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rc5-Jq-y8w"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="bTD-Yo-HTb" firstAttribute="centerY" secondItem="WlF-V6-wWd" secondAttribute="centerY" id="dPK-Ui-ZFS"/>
+                                                    <constraint firstItem="bTD-Yo-HTb" firstAttribute="centerX" secondItem="WlF-V6-wWd" secondAttribute="centerX" id="kI3-gm-0GG"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t4b-D4-yxt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8qs-kc-DyF"/>
+                            <constraint firstItem="t4b-D4-yxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ane-On-2aV"/>
+                            <constraint firstItem="t4b-D4-yxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M6L-zb-4DL"/>
+                            <constraint firstItem="t4b-D4-yxt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tBb-iF-6By"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BackButton" destination="rYB-iB-2xR" id="oZw-jL-rwD"/>
+                        <outlet property="DirectionView" destination="vDD-DU-3sn" id="6R8-7t-xcp"/>
+                        <outlet property="FowardBackView" destination="bcR-Hm-1sy" id="Dih-D8-h5W"/>
+                        <outlet property="FowardButton" destination="rS8-Mn-pFY" id="CKU-Hs-8im"/>
+                        <outlet property="LeftButton" destination="XNC-hA-JbJ" id="fdM-hQ-lOU"/>
+                        <outlet property="LeftView" destination="d4g-NM-YFS" id="zFx-Uf-kae"/>
+                        <outlet property="MainView" destination="t4b-D4-yxt" id="czL-xL-72N"/>
+                        <outlet property="MessageView" destination="26I-b3-Gzu" id="nSZ-sA-6eh"/>
+                        <outlet property="QuestText" destination="he7-2W-syX" id="bXD-yi-PaP"/>
+                        <outlet property="RightButton" destination="bTD-Yo-HTb" id="KeP-ZD-vrc"/>
+                        <outlet property="RightView" destination="WlF-V6-wWd" id="vVk-tY-ueN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14.503816793893129" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
