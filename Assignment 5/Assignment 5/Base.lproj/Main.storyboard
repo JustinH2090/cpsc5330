@@ -16,23 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="511-k3-W3G">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="t4b-D4-yxt" userLabel="sv1">
                                 <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26I-b3-Gzu" userLabel="MaiMessageView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="333"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quest Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he7-2W-syX" userLabel="Quest Text">
-                                                <rect key="frame" x="139" y="151.66666666666669" width="115" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quest Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he7-2W-syX" userLabel="Quest Text">
+                                                <rect key="frame" x="50" y="100" width="293" height="183"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="183" id="HDs-g6-jpl"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="he7-2W-syX" firstAttribute="centerX" secondItem="26I-b3-Gzu" secondAttribute="centerX" id="t5V-4M-P1n"/>
-                                            <constraint firstItem="he7-2W-syX" firstAttribute="centerY" secondItem="26I-b3-Gzu" secondAttribute="centerY" id="zxh-a3-DAr"/>
+                                            <constraint firstItem="he7-2W-syX" firstAttribute="leading" secondItem="26I-b3-Gzu" secondAttribute="leading" constant="50" id="DlC-bx-Suj"/>
+                                            <constraint firstAttribute="bottom" secondItem="he7-2W-syX" secondAttribute="bottom" constant="50" id="IFe-gO-76q"/>
+                                            <constraint firstItem="he7-2W-syX" firstAttribute="centerX" secondItem="26I-b3-Gzu" secondAttribute="centerX" id="n6v-hc-mwh"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-DU-3sn" userLabel="DirectionView">
@@ -50,10 +57,9 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="XNC-hA-JbJ" firstAttribute="centerY" secondItem="d4g-NM-YFS" secondAttribute="centerY" id="EA7-eY-Qyd"/>
-                                                    <constraint firstItem="XNC-hA-JbJ" firstAttribute="centerX" secondItem="d4g-NM-YFS" secondAttribute="centerX" id="gLC-D4-XgK"/>
+                                                    <constraint firstItem="XNC-hA-JbJ" firstAttribute="centerY" secondItem="d4g-NM-YFS" secondAttribute="centerY" id="R2r-HK-nzb"/>
+                                                    <constraint firstItem="XNC-hA-JbJ" firstAttribute="centerX" secondItem="d4g-NM-YFS" secondAttribute="centerX" id="SQU-ie-FXr"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bcR-Hm-1sy" userLabel="FowardBackView">
@@ -69,6 +75,9 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYB-iB-2xR" userLabel="Back Button">
                                                         <rect key="frame" x="0.0" y="166.66666666666663" width="131" height="166.33333333333337"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="166.33333333333337" id="3hP-86-sSm"/>
+                                                        </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                                         <connections>
@@ -76,16 +85,12 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="rYB-iB-2xR" firstAttribute="width" secondItem="rS8-Mn-pFY" secondAttribute="width" id="8lq-8A-b8h"/>
-                                                    <constraint firstItem="rYB-iB-2xR" firstAttribute="height" secondItem="rS8-Mn-pFY" secondAttribute="height" id="bBv-tM-r2N"/>
-                                                </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlF-V6-wWd" userLabel="RightView">
                                                 <rect key="frame" x="262" y="0.0" width="131" height="333"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTD-Yo-HTb" userLabel="Right Button">
-                                                        <rect key="frame" x="33.666666666666686" y="149.33333333333337" width="64" height="34.333333333333343"/>
+                                                        <rect key="frame" x="33.666666666666686" y="139.33333333333337" width="63.666666666666657" height="54.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Right"/>
                                                         <connections>
@@ -93,10 +98,10 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="bTD-Yo-HTb" firstAttribute="centerY" secondItem="WlF-V6-wWd" secondAttribute="centerY" id="dPK-Ui-ZFS"/>
-                                                    <constraint firstItem="bTD-Yo-HTb" firstAttribute="centerX" secondItem="WlF-V6-wWd" secondAttribute="centerX" id="kI3-gm-0GG"/>
+                                                    <constraint firstItem="bTD-Yo-HTb" firstAttribute="leading" secondItem="WlF-V6-wWd" secondAttribute="leading" constant="33.666666666666686" id="D6H-0t-NPm"/>
+                                                    <constraint firstItem="bTD-Yo-HTb" firstAttribute="centerX" secondItem="WlF-V6-wWd" secondAttribute="centerX" id="IKU-Gu-0Y1"/>
+                                                    <constraint firstItem="bTD-Yo-HTb" firstAttribute="centerY" secondItem="WlF-V6-wWd" secondAttribute="centerY" id="gxl-it-EMZ"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -107,10 +112,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="t4b-D4-yxt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8qs-kc-DyF"/>
-                            <constraint firstItem="t4b-D4-yxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ane-On-2aV"/>
-                            <constraint firstItem="t4b-D4-yxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M6L-zb-4DL"/>
-                            <constraint firstItem="t4b-D4-yxt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tBb-iF-6By"/>
+                            <constraint firstItem="511-k3-W3G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BMn-SJ-PfY"/>
+                            <constraint firstItem="511-k3-W3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CKJ-TI-9DF"/>
+                            <constraint firstItem="t4b-D4-yxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qfe-t8-6W5"/>
+                            <constraint firstAttribute="bottom" secondItem="511-k3-W3G" secondAttribute="bottom" id="TWl-vE-U5U"/>
+                            <constraint firstItem="t4b-D4-yxt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V3S-m4-d0o"/>
+                            <constraint firstItem="511-k3-W3G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VdO-Fj-y9o"/>
+                            <constraint firstItem="511-k3-W3G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bvu-nA-7OM"/>
+                            <constraint firstItem="511-k3-W3G" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="e0y-hs-dEH"/>
+                            <constraint firstItem="t4b-D4-yxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gCV-1N-Uld"/>
+                            <constraint firstItem="t4b-D4-yxt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qTA-a0-uiH"/>
                         </constraints>
                     </view>
                     <connections>
