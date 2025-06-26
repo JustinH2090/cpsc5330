@@ -9,22 +9,22 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    
+    @IBOutlet weak var ResultsLabel: UILabel!
+    var aa: [CurrencyType] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.lightGray
-
-        // Do any additional setup after loading the view.
+        
+        guard isViewLoaded, let ResultsLabel = ResultsLabel else {
+                print("error")
+                return
+            }
+        var x = ""
+        for currency in aa{
+            x += "\(currency.name): \(String(format: "%.2f", currency.ratio))\n"
+        }
+        ResultsLabel.text = x
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

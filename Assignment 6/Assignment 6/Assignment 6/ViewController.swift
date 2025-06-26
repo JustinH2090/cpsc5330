@@ -10,7 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var dollarsInput: UITextField!
+    var a: [CurrencyType] = []
+    
+    @IBOutlet weak var dollarInput: UITextField!
     @IBOutlet weak var switchMM: UISwitch!
     @IBOutlet weak var switchORP: UISwitch!
     @IBOutlet weak var switchWOW: UISwitch!
@@ -22,31 +24,48 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
     }
     
     
-    @IBAction func goToResults(_ sender: UIButton) {
-        let results = ResultsViewController()
-        self.present(results, animated: true, completion: nil)
+    @IBAction func toResults(_ sender: UIButton) {
+        checkSwitches()
+        self.performSegue(withIdentifier: "toResults", sender: self)
+
+    }
+    
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      guard segue.identifier == "toResults" else { return }
+      if let results = segue.destination as? ResultsViewController {
+        results.aa = a
+      } else {
+        print("Error in prepare")
+      }
+    }
+
+    
+    func checkSwitches(){
+        a.removeAll()
+        let b = Double(dollarInput.text ?? "") ?? 0.0
         
+        if switchMM.isOn{
+            a.append(CurrencyType(name: "MonopolyMoney",ratio: b * 0))
+        }
+        if switchORP.isOn{
+            a.append(CurrencyType(name: "Old Roman Denarius",ratio: b * (1.0/50.0)))
+        }
+        if switchWOW.isOn{
+            a.append(CurrencyType(name: "WoW Gold",ratio: b * (1200000.0 / 57.09)))
+        }
+        if switchEurp.isOn{
+            a.append(CurrencyType(name: "Euro",ratio: b * (1.0/1.17)))
+        }
         
     }
     
-    var a: [CurrecyType] = []
     
-    if switchMM.isOn{
-        a.append(CurrencyType(name: "MonopolyMoney",ratio: 0))
-    }
-    if switchORP.isOn{
-        a.append(CurrencyType(name: "Old Roman Denarius",ratio: 1.0/50.0))
-    }
-    if switchWOW.isOn{
-        a.append(CurrencyType(name: "MonopolyMoney",ratio: 1200000.0 / 57.09))
-    }
-    if switchEurp.isOn{
-        a.append(CurrencyType(name: "MonopolyMoney",ratio: 1.0/1.17))
-    }
+    
     
 }
 

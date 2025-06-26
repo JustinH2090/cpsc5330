@@ -226,17 +226,58 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dollarInput" destination="KAC-A8-sIT" id="SmB-HU-6ni"/>
                         <outlet property="dollarsInout" destination="KAC-A8-sIT" id="HIc-hE-TP7"/>
                         <outlet property="submitButton" destination="un2-Mz-N2y" id="che-zM-1Rh"/>
                         <outlet property="switchEurp" destination="bzV-Sy-YLN" id="lHK-cv-vdZ"/>
                         <outlet property="switchMM" destination="iMI-iQ-vHZ" id="kj4-Jl-Smf"/>
                         <outlet property="switchORP" destination="02S-g8-2OV" id="gPt-PE-naY"/>
                         <outlet property="switchWOW" destination="HQ8-sk-H5J" id="k7Q-gd-ctJ"/>
+                        <segue destination="UDN-ut-1AN" kind="presentation" identifier="toResults" modalPresentationStyle="fullScreen" id="tST-FA-AlI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="25.190839694656489" y="-28.87323943661972"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="nLU-3X-x43">
+            <objects>
+                <viewController id="UDN-ut-1AN" customClass="ResultsViewController" customModule="Assignment_6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zna-mH-bvu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DNR-wM-Y5s">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResultsLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPG-LK-VVf" userLabel="ResultsLabel">
+                                        <rect key="frame" x="127.33333333333333" y="0.0" width="138.33333333333337" height="759"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sBC-vl-AY9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DNR-wM-Y5s" firstAttribute="leading" secondItem="sBC-vl-AY9" secondAttribute="leading" id="0NH-Qd-60W"/>
+                            <constraint firstItem="DNR-wM-Y5s" firstAttribute="centerX" secondItem="sBC-vl-AY9" secondAttribute="centerX" id="7Kp-2m-tOZ"/>
+                            <constraint firstItem="DNR-wM-Y5s" firstAttribute="centerY" secondItem="sBC-vl-AY9" secondAttribute="centerY" id="AKH-pH-8xe"/>
+                            <constraint firstItem="sBC-vl-AY9" firstAttribute="trailing" secondItem="DNR-wM-Y5s" secondAttribute="trailing" id="OBy-Gd-jyr"/>
+                            <constraint firstItem="sBC-vl-AY9" firstAttribute="bottom" secondItem="DNR-wM-Y5s" secondAttribute="bottom" id="j3A-r7-BGg"/>
+                            <constraint firstItem="DNR-wM-Y5s" firstAttribute="top" secondItem="sBC-vl-AY9" secondAttribute="top" id="z30-io-OA3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ResultsLabel" destination="cPG-LK-VVf" id="RKX-rq-D1w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksd-MZ-tZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.73282442748086" y="-19.014084507042256"/>
         </scene>
     </scenes>
     <resources>
