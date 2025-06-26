@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     
     var a: [CurrencyType] = []
     
-    @IBOutlet weak var dollarInput: UITextField!
+    
+    @IBOutlet weak var DollarInput: UITextField!
     @IBOutlet weak var switchMM: UISwitch!
     @IBOutlet weak var switchORP: UISwitch!
     @IBOutlet weak var switchWOW: UISwitch!
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func toResults(_ sender: UIButton) {
+    @IBAction func goToResults(_ sender: UIButton) {
         checkSwitches()
         self.performSegue(withIdentifier: "toResults", sender: self)
 
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
     
     func checkSwitches(){
         a.removeAll()
-        let b = Double(dollarInput.text ?? "") ?? 0.0
+        let b = Double(DollarInput.text ?? "") ?? 0.0
         
         if switchMM.isOn{
             a.append(CurrencyType(name: "MonopolyMoney",ratio: b * 0))
