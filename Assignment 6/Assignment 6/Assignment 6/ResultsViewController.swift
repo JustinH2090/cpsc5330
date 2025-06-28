@@ -16,13 +16,15 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard isViewLoaded, let ResultsLabel = ResultsLabel else {
-                print("error")
-                return
-            }
+        //guard isViewLoaded, let ResultsLabel = ResultsLabel else {
+                //print("error")
+                //return
+            //}
         var x = ""
         for currency in aa{
-            x += "\(currency.name): \(String(format: "%.2f", currency.ratio))\n"
+            let formatted = currency.ratio.formatted(.number.precision(.fractionLength(2)).grouping(.automatic))
+            
+            x += "\(currency.name): $\(formatted)\n"
         }
         ResultsLabel.text = x
     }

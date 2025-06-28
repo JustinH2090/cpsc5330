@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         let b = Double(DollarInput.text ?? "") ?? 0.0
         
         if switchMM.isOn{
-            a.append(CurrencyType(name: "MonopolyMoney",ratio: b * 0))
+            a.append(CurrencyType(name: "Monopoly Money",ratio: b * (59100 / 1)))
         }
         if switchORP.isOn{
             a.append(CurrencyType(name: "Old Roman Denarius",ratio: b * (1.0/50.0)))
