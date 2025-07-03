@@ -17,10 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rNq-GW-Fhn">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" textLabel="gv2-T5-4e1" detailTextLabel="eB7-pe-dFx" style="IBUITableViewCellStyleSubtitle" id="mcc-Zz-8zj">
+=======
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" textLabel="gv2-T5-4e1" detailTextLabel="eB7-pe-dFx" style="IBUITableViewCellStyleValue1" id="mcc-Zz-8zj">
+>>>>>>> 6ff1db3 (finished)
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mcc-Zz-8zj" id="xmh-3y-0Av">
@@ -28,14 +35,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gv2-T5-4e1">
+<<<<<<< HEAD
                                                     <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+=======
+                                                    <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+>>>>>>> 6ff1db3 (finished)
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+<<<<<<< HEAD
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eB7-pe-dFx">
                                                     <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+=======
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eB7-pe-dFx">
+                                                    <rect key="frame" x="329.33333333333331" y="15" width="43.666666666666664" height="14.333333333333334"/>
+>>>>>>> 6ff1db3 (finished)
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
@@ -54,12 +70,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+<<<<<<< HEAD
                             <constraint firstItem="rNq-GW-Fhn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6SC-zE-nXf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rNq-GW-Fhn" secondAttribute="trailing" id="E5j-nc-sZf"/>
                             <constraint firstItem="rNq-GW-Fhn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wd1-7q-CGR"/>
                             <constraint firstItem="rNq-GW-Fhn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e4x-jj-p2K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rNq-GW-Fhn" secondAttribute="bottom" id="mbO-XQ-GTE"/>
                             <constraint firstItem="rNq-GW-Fhn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rrr-6V-QhF"/>
+=======
+                            <constraint firstAttribute="bottom" secondItem="rNq-GW-Fhn" secondAttribute="bottom" id="Et9-Dx-ohB"/>
+                            <constraint firstItem="rNq-GW-Fhn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mst-ws-Wm5"/>
+                            <constraint firstItem="rNq-GW-Fhn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wXA-by-fUX"/>
+                            <constraint firstItem="rNq-GW-Fhn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xE7-Jw-soE"/>
+>>>>>>> 6ff1db3 (finished)
                         </constraints>
                     </view>
                     <connections>
@@ -90,8 +113,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9Vb-wH-Wir" firstAttribute="bottom" secondItem="5OX-Zv-F3m" secondAttribute="bottom" id="0KE-xG-itE"/>
+<<<<<<< HEAD
                             <constraint firstItem="5OX-Zv-F3m" firstAttribute="centerX" secondItem="9Vb-wH-Wir" secondAttribute="centerX" id="3CI-rG-jLg"/>
                             <constraint firstItem="5OX-Zv-F3m" firstAttribute="centerY" secondItem="9Vb-wH-Wir" secondAttribute="centerY" id="dDP-6O-y47"/>
+=======
+>>>>>>> 6ff1db3 (finished)
                             <constraint firstItem="9Vb-wH-Wir" firstAttribute="trailing" secondItem="5OX-Zv-F3m" secondAttribute="trailing" id="dtN-NB-nNo"/>
                             <constraint firstItem="5OX-Zv-F3m" firstAttribute="top" secondItem="9Vb-wH-Wir" secondAttribute="top" id="taw-jI-CTd"/>
                             <constraint firstItem="5OX-Zv-F3m" firstAttribute="leading" secondItem="9Vb-wH-Wir" secondAttribute="leading" id="yzY-PZ-NLT"/>
