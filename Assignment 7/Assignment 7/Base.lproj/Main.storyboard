@@ -57,7 +57,6 @@
                             <constraint firstItem="rNq-GW-Fhn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6SC-zE-nXf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rNq-GW-Fhn" secondAttribute="trailing" id="E5j-nc-sZf"/>
                             <constraint firstItem="rNq-GW-Fhn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Wd1-7q-CGR"/>
-                            <constraint firstItem="rNq-GW-Fhn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e4x-jj-p2K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rNq-GW-Fhn" secondAttribute="bottom" id="mbO-XQ-GTE"/>
                             <constraint firstItem="rNq-GW-Fhn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rrr-6V-QhF"/>
                         </constraints>
@@ -90,8 +89,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9Vb-wH-Wir" firstAttribute="bottom" secondItem="5OX-Zv-F3m" secondAttribute="bottom" id="0KE-xG-itE"/>
-                            <constraint firstItem="5OX-Zv-F3m" firstAttribute="centerX" secondItem="9Vb-wH-Wir" secondAttribute="centerX" id="3CI-rG-jLg"/>
-                            <constraint firstItem="5OX-Zv-F3m" firstAttribute="centerY" secondItem="9Vb-wH-Wir" secondAttribute="centerY" id="dDP-6O-y47"/>
                             <constraint firstItem="9Vb-wH-Wir" firstAttribute="trailing" secondItem="5OX-Zv-F3m" secondAttribute="trailing" id="dtN-NB-nNo"/>
                             <constraint firstItem="5OX-Zv-F3m" firstAttribute="top" secondItem="9Vb-wH-Wir" secondAttribute="top" id="taw-jI-CTd"/>
                             <constraint firstItem="5OX-Zv-F3m" firstAttribute="leading" secondItem="9Vb-wH-Wir" secondAttribute="leading" id="yzY-PZ-NLT"/>
