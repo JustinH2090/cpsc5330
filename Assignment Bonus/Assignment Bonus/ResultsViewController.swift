@@ -18,12 +18,9 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        resultsLabel.text = String(bmiValue)
+        resultsLabel.text = String(format: "%.1f", bmiValue)
         stringLabel.text = bmiCategory
         
     }
-    
-    
-    
 
 }

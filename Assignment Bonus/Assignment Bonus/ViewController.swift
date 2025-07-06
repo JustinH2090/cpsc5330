@@ -15,11 +15,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var switchIM: UISwitch!
     @IBOutlet weak var miscText: UILabel!
     @IBOutlet weak var calcButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        switchIM.isOn = false
+        //switchIM.isOn = false
         update()
+    }
+    
+    @IBAction func clearButtonClicked(_ sender: UIButton) {
+        if(switchIM.isOn){
+            feetInput.text = ""
+            feetInput.placeholder = "Centimeter"
+            inchesInput.isEnabled = false
+            inchesInput.text = nil
+            inchesInput.placeholder = nil
+            weightInput.text = ""
+            weightInput.placeholder = "Kilograms"
+            miscText.text = "Enter CM for height and KG for weight"
+            
+        }else{
+            feetInput.text = ""
+            feetInput.placeholder = "Feet"
+            inchesInput.isEnabled = true
+            inchesInput.text = ""
+            inchesInput.placeholder = "Inches"
+            weightInput.text = ""
+            weightInput.placeholder = "Pounds"
+            miscText.text = "Enter height as feet(i.e 5), inches(i.e 10), weight in pounds"
+        }
+        
     }
     
     @IBAction func switchClicked(_ sender: UISwitch) {update()}
@@ -54,9 +79,12 @@ class ViewController: UIViewController {
 
                 let metricCalc = BMICalcMetric(heightCM: h,weightKG: w)
             
-                let convert = metricCalc.toImperialCalc()
-                resultVC.bmiValue = convert.calcBMI()
-                resultVC.bmiCategory = convert.showCatBMI()
+                //let convert = metricCalc.toImperialCalc()
+                //resultVC.bmiValue = convert.calcBMI()
+                //resultVC.bmiCategory = convert.showCatBMI()
+            
+                resultVC.bmiValue = metricCalc.calcBMIMetric()
+                resultVC.bmiCategory = metricCalc.showCatBMI()
 
            } else {
                 let f = Int(feetInput.text ?? "") ?? 0
