@@ -8,22 +8,22 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-
+    
+    var bmiValue:Double!
+    var bmiCategory:String!
+    
+    @IBOutlet weak var resultsLabel: UILabel!
+    @IBOutlet weak var stringLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        resultsLabel.text = String(bmiValue)
+        stringLabel.text = bmiCategory
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }
